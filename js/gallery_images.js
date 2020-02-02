@@ -8,6 +8,7 @@ var str = new Array();
 var str1 = new Array();
 var str2 = new Array();
 var mon = new Array();
+var monzh = new Array();
 var nm = new Array();
 var str3 = 
 	'<div class="zoom-container">'
@@ -51,7 +52,49 @@ function deal_with(xml) {
 		+			'</div>'
 		+		'</div>'
 		+	'</div>';
-
+		switch(mon[i])
+		{
+			case "Jan":
+				monzh[i]="1月";
+				break;
+			case "Feb":
+				monzh[i]="2月";
+				break;
+			case "Mar":
+				monzh[i]="3月";
+				break;
+			case "Apr":
+				monzh[i]="4月";
+				break;
+			case "May":
+				monzh[i]="5月";
+				break;
+			case "Jun":
+				monzh[i]="6月";
+				break;
+			case "Jul":
+				monzh[i]="7月";
+				break;
+			case "Aug":
+				monzh[i]="8月";
+				break;
+			case "Sept":
+				monzh[i]="9月";
+				break;
+			case "Oct":
+				monzh[i]="10月";
+				break;
+			case "Nov":
+				monzh[i]="11月";
+				break;
+			case "Dec":
+				monzh[i]="12月";
+				break;
+		}
+		if (mon[i] != mon[i-1])
+		{
+			gl += '<p>'+monzh[i]+'</p>'
+		}	
 		gl += str[i];
 	};
 	document.getElementById("gallery").innerHTML = gl
