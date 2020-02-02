@@ -32,7 +32,7 @@ function deal_with(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
 	var gl = ""
-	for (var i=0; i<line.length; i++)
+	for (var i=0; i<line.length-1; i++)
 	{
 		var data = line[i].split(" ")
 		mon[i] = data[0]
