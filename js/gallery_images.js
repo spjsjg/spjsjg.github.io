@@ -49,6 +49,7 @@ function deal_with(xml) {
 		+			'</a>'
 		+		'</div>'
 		+	'</div>';
-		document.write(str[i])
+		var gallery += str[i]
 	};
+	document.getElementById("gallery").innerHTML = gallery
 }
