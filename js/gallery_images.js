@@ -50,6 +50,6 @@ function deal_with(xml) {
 +					'</a>'
 +				'</div>'
 +			'</div>'
-		document.write(str[i])
+		document.write(contents)
 	};
 }
