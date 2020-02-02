@@ -52,4 +52,5 @@ function deal_with(xml) {
 		var gallery += str[i]
 	};
 	document.getElementById("gallery").innerHTML = gallery
+	document.write('<p id="gallery"></p>')
 }
