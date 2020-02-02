@@ -35,20 +35,21 @@ function deal_with(xml) {
 	{
 		var data = line[i].split(" ")
 		month[i] = data[0]
-		name[i] = data[2]
+		name[i] = "sos"
+//		name[i] = data[2]
 		str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+name[i]+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
 		str2[i]='<img class="example-image" src="'+imgurl4_1+'images%2Fthumb%2F'+name[i]+imgurl4_2+'" alt=""/>'
 //		str1[i]='<a class="example-image-link" href="'+imgurl5+'index/'+name[i]+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
 //		str2[i]='<img class="example-image" src="'+imgurl5+'index/thumb/'+name[i]+'" alt=""/>'
 		str[i]=	
 			'<div class="col-1-6">'
-+				'<div class="wrap-col">'
-+					'<div class="item">'
-+str1[i]+str3+str2[i]
-+						'</div>'
-+					'</a>'
-+				'</div>'
-+			'</div>';
+		+		'<div class="wrap-col">'
+		+			'<div class="item">'
+		+	str1[i]+str3+str2[i]
+		+				'</div>'
+		+			'</a>'
+		+		'</div>'
+		+	'</div>';
 		document.write(str[i])
 	};
 }
