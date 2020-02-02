@@ -1,12 +1,3 @@
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		deal_with(this);
-	}
-};
-xhttp.open("GET", "images-2020.txt", true);
-xhttp.send();
-
 var imgurl1 = "https://gitee.com/spjsjg/images-2020/raw/master/"
 var imgurl2 = "https://raw.githubusercontent.com/spjsjg/images-2020/master/"
 var imgurl3 = "https://coding.net/u/c2726139513/p/images-2020/git/raw/master/"
@@ -27,6 +18,15 @@ var str3=
 	+			'</div>'
 	+		'</div>'
 	+	'</div>';
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		deal_with(this);
+	}
+};
+xhttp.open("GET", "images-2020.txt", true);
+xhttp.send();
 
 function deal_with(xml) {
 	contents = xml.responseText;
