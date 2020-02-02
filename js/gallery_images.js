@@ -52,4 +52,5 @@ function deal_with(xml) {
 +			'</div>'
 		document.write(contents)
 	};
+	document.write(contents);
 }
