@@ -63,12 +63,12 @@ body .wrap-body{}
 /* -------------------------------------Header--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 header{}
-header .wrap-header{padding: 120px 0;}
+header .wrap-header{padding: 120px 0 0;}
 header .logo{margin-bottom: 100px;}
 
 @media (max-width: 767px) { 
 	header{margin-top: 0;}
-	header .wrap-header{padding: 70px 10px 0 10px;}
+	header .wrap-header{padding: 70px 10px 0;}
 	header .logo{margin-bottom: 60px;}
 	
 	#cssmenu{border: 1px solid #fff;}
