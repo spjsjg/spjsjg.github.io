@@ -94,7 +94,7 @@ function deal_with(xml) {
 		}
 		if (mon[i] != mon[i-1])
 		{
-			gl += '<br>'+'<p>'+year+monzh[i]+'</p>'
+			gl += '<p>'+year+monzh[i]+'</p>'
 		}	
 		gl += str[i];
 	};
