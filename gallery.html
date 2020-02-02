@@ -79,7 +79,7 @@ xhttp.onreadystatechange = function() {
 		document.write(this.responseText);
 	}
 };
-xhttp.open("POST", "images-2020.txt", false);
+xhttp.open("GET", "images-2020.txt", false);
 xhttp.send();
 document.write(xhttp.responseText);
 
