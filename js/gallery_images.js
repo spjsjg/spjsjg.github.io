@@ -18,8 +18,8 @@ var str3=
 	+	'</div>';
 for (var i=1; i<20; i++)
 {
-	str1[i]='<a class="example-image-link" href="'+imgurl4_1+'index%2F'+String(i)+'.jpg'+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
-	str2[i]='<img class="example-image" src="'+imgurl4_1+'index%2Fthumb%2F'+String(i)+'.jpg'+imgurl4_2+'" alt=""/>'
+	str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+String(i)+'.jpg'+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
+	str2[i]='<img class="example-image" src="'+imgurl4_1+'images%2Fthumb%2F'+String(i)+'.jpg'+imgurl4_2+'" alt=""/>'
 //	str1[i]='<a class="example-image-link" href="'+imgurl5+'index/'+String(i)+'.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
 //	str2[i]='<img class="example-image" src="'+imgurl5+'index/thumb/'+String(i)+'.jpg" alt=""/>'
 	str[i]=	
@@ -31,4 +31,14 @@ for (var i=1; i<20; i++)
 +				'</a>'
 +			'</div>'
 +		'</div>'
+}
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "/home/qwer/Desktop/spjsjg.github.io/images-2020.txt", true);
+  xhttp.send();
 }
