@@ -8,7 +8,7 @@ xhttp.onreadystatechange = function() {
 
 	}
 };
-xhttp.open("POST", "images-2020.txt", true);
+xhttp.open("POST", "../images-2020.txt", true);
 xhttp.send();
 document.write(contents);
 
