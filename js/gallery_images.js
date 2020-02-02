@@ -7,8 +7,8 @@ var imgurl5 = "images/"
 var str = new Array();
 var str1 = new Array();
 var str2 = new Array();
-var month = new Array();
-var name = new Array();
+var mon = new Array();
+var nm = new Array();
 var str3 = 
 	'<div class="zoom-container">'
 	+	'<div class="zoom-caption">'
@@ -34,11 +34,10 @@ function deal_with(xml) {
 	for (var i=0; i<line.length; i++)
 	{
 		var data = line[i].split(" ")
-		month[i] = data[0]
-		name[i] = "sos"
-//		name[i] = data[2]
-		str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+name[i]+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
-		str2[i]='<img class="example-image" src="'+imgurl4_1+'images%2Fthumb%2F'+name[i]+imgurl4_2+'" alt=""/>'
+		mon[i] = data[0]
+		nm[i] = data[2]
+		str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+nm[i]+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
+		str2[i]='<img class="example-image" src="'+imgurl4_1+'images%2Fthumb%2F'+nm[i]+imgurl4_2+'" alt=""/>'
 //		str1[i]='<a class="example-image-link" href="'+imgurl5+'index/'+name[i]+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
 //		str2[i]='<img class="example-image" src="'+imgurl5+'index/thumb/'+name[i]+'" alt=""/>'
 		str[i]=	
