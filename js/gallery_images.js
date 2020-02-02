@@ -1,7 +1,11 @@
+var contents;
+
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		deal_with(this);
+		document.write(contents);
+
 	}
 };
 xhttp.open("POST", "images-2020.txt", true);
@@ -28,7 +32,6 @@ var str3=
 	+	'</div>';
 var month=new Array();
 var name=new Array();
-var contents;
 
 function deal_with(xml) {
 	contents = xml.responseText;
@@ -53,5 +56,4 @@ function deal_with(xml) {
 +			'</div>'
 		document.write(contents)
 	};
-	document.write(contents);
 }
