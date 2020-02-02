@@ -77,15 +77,14 @@
 			</div>
 		<script>
  			 var xhttp = new XMLHttpRequest();
-			 var string;
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
-			      string = this.responseText;
+			      var string = this.responseText;
+			      document.write(string)
 			    }
 			  };
 			  xhttp.open("GET", "images-2020.txt", true);
 			  xhttp.send();
-			  document.write(string)
 		</script>
 		</section>
 		<hr class="line">
