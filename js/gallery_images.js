@@ -28,9 +28,10 @@ var str3=
 	+	'</div>';
 var month=new Array();
 var name=new Array();
+var contents;
 
 function deal_with(xml) {
-	var contents = xml.responseText;
+	contents = xml.responseText;
 	var line = contents.split("\n");
 	for (var i=0; i<line.length; i++)
 	{
