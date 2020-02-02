@@ -46,8 +46,9 @@ function deal_with(xml) {
 		+		'<div class="wrap-col">'
 		+			'<div class="item">'
 		+	str1[i]+str3+str2[i]
-		+				'</div>'
-		+			'</a>'
+		+					'</div>'
+		+				'</a>'
+		+			'</div>'
 		+		'</div>'
 		+	'</div>';
 
