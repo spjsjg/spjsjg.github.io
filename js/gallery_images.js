@@ -31,7 +31,7 @@ xhttp.send();
 function deal_with(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
-	var gl
+	var gl = ""
 	for (var i=0; i<line.length; i++)
 	{
 		var data = line[i].split(" ")
