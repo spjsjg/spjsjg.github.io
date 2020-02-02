@@ -1,11 +1,7 @@
-var contents;
-
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		deal_with(this);
-		document.write(contents);
-
 	}
 };
 xhttp.open("POST", "/images-2020.txt", true);
@@ -53,6 +49,6 @@ function deal_with(xml) {
 +					'</a>'
 +				'</div>'
 +			'</div>'
-		document.write(contents)
+		document.write(str[i])
 	};
 }
