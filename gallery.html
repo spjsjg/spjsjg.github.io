@@ -105,7 +105,7 @@ function deal_with(xml) {
 	var name=new Array();
 	var contents = xml.responseText;
 	var line = contents.split("\n");
-	for (var i=0; i<line.length; i++)
+	for (var i=0; i<line.length-1; i++)
 	{
 		var data = line[i].split(" ")
 		month[i] = data[0]
@@ -124,13 +124,7 @@ function deal_with(xml) {
 +				'</div>'
 +			'</div>'
 
-		document.write(contents+"<br>")
-		document.write(line[0]+"<br>")
-		document.write(name[i]+"<br>")
-		document.write(line.length+"<br>")
-		document.write(data[0]+"<br>")
-		document.write(data[1]+"<br>")
-		document.write(data[2]+"<br>")
+		document.write(str[i])
 	};
 }
 </script>
