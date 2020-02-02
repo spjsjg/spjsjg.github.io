@@ -79,8 +79,8 @@
  			 var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
-			      var string = this.responseText;
-			      document.write("<p>"+string+"</p>")
+			      var st = this.responseText;
+			      document.write("<p>"+st+"</p>")
 			    }
 			  };
 			  xhttp.open("GET", "images-2020.txt", true);
