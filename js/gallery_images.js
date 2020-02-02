@@ -10,7 +10,7 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("POST", "images-2020.txt", true);
 xhttp.send();
-
+document.write(contents);
 
 var imgurl1 = "https://gitee.com/spjsjg/images-2020/raw/master/"
 var imgurl2 = "https://raw.githubusercontent.com/spjsjg/images-2020/master/"
