@@ -107,7 +107,8 @@ function deal_with(xml) {
 	var line = contents.split("\n");
 	for (var i=0; i<line.length; i++)
 	{
-		var data = line[i].split(" ")
+		var predata = line[i]
+		var data = predata.split(" ")
 		month[i] = data[0]
 		name[i] = data[2]
 		str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+name[i]+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
