@@ -50,7 +50,8 @@ function deal_with(xml) {
 		+			'</a>'
 		+		'</div>'
 		+	'</div>';
-		gl += str[i]
+
+		gl += str[i];
 	};
 	document.getElementById("gallery").innerHTML = gl
 }
