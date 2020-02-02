@@ -1,3 +1,13 @@
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		deal_with(this)
+	}
+};
+xhttp.open("POST", "images-2020.txt", true);
+xhttp.send();
+
+
 var imgurl1 = "https://gitee.com/spjsjg/images-2020/raw/master/"
 var imgurl2 = "https://raw.githubusercontent.com/spjsjg/images-2020/master/"
 var imgurl3 = "https://coding.net/u/c2726139513/p/images-2020/git/raw/master/"
@@ -16,29 +26,30 @@ var str3=
 	+			'</div>'
 	+		'</div>'
 	+	'</div>';
-for (var i=1; i<20; i++)
-{
-	str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+String(i)+'.jpg'+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
-	str2[i]='<img class="example-image" src="'+imgurl4_1+'images%2Fthumb%2F'+String(i)+'.jpg'+imgurl4_2+'" alt=""/>'
-//	str1[i]='<a class="example-image-link" href="'+imgurl5+'index/'+String(i)+'.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
-//	str2[i]='<img class="example-image" src="'+imgurl5+'index/thumb/'+String(i)+'.jpg" alt=""/>'
-	str[i]=	
-		'<div class="col-1-3">'
-+			'<div class="wrap-col">'
-+				'<div class="item">'
+var month=new Array();
+var name=new Array();
+
+function deal_with(xml) {
+	var contents = xml.responseText;
+	var line = contents.split("\n");
+	for (var i=0; i<line.length; i++)
+	{
+		var data = line[i].split(" ")
+		month[i] = data[0]
+		name[i] = data[2]
+		str1[i]='<a class="example-image-link" href="'+imgurl4_1+'images%2F'+name[i]+imgurl4_2+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
+		str2[i]='<img class="example-image" src="'+imgurl4_1+'images%2Fthumb%2F'+name[i]+imgurl4_2+'" alt=""/>'
+//		str1[i]='<a class="example-image-link" href="'+imgurl5+'index/'+name[i]+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
+//		str2[i]='<img class="example-image" src="'+imgurl5+'index/thumb/'+name[i]+'" alt=""/>'
+		str[i]=	
+			'<div class="col-1-6">'
++				'<div class="wrap-col">'
++					'<div class="item">'
 +str1[i]+str3+str2[i]
-+					'</div>'
-+				'</a>'
++						'</div>'
++					'</a>'
++				'</div>'
 +			'</div>'
-+		'</div>'
-}
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("POST", "/home/qwer/Desktop/spjsjg.github.io/images-2020.txt", true);
-  xhttp.send();
+		document.write(str[i])
+	};
 }
