@@ -31,6 +31,7 @@ xhttp.send();
 function deal_with(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
+	var gl
 	for (var i=0; i<line.length; i++)
 	{
 		var data = line[i].split(" ")
@@ -49,6 +50,7 @@ function deal_with(xml) {
 		+			'</a>'
 		+		'</div>'
 		+	'</div>';
-		document.write(str[i]);
+		gl += str[i]
 	};
+	document.getElementById("gallery").innerHTML = gl
 }
