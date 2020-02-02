@@ -4,7 +4,7 @@ xhttp.onreadystatechange = function() {
 		deal_with(this);
 	}
 };
-xhttp.open("POST", "/images-2020.txt", true);
+xhttp.open("GET", "images-2020.txt", true);
 xhttp.send();
 
 var imgurl1 = "https://gitee.com/spjsjg/images-2020/raw/master/"
@@ -16,6 +16,8 @@ var imgurl5 = "images/"
 var str=new Array();
 var str1=new Array();
 var str2=new Array();
+var month=new Array();
+var name=new Array();
 var str3=
 	'<div class="zoom-container">'
 	+	'<div class="zoom-caption">'
@@ -25,8 +27,6 @@ var str3=
 	+			'</div>'
 	+		'</div>'
 	+	'</div>';
-var month=new Array();
-var name=new Array();
 
 function deal_with(xml) {
 	contents = xml.responseText;
