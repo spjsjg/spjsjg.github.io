@@ -10,6 +10,7 @@ var str2 = new Array();
 var mon = new Array();
 var monzh = new Array();
 var nm = new Array();
+var year = "2020年"
 var str3 = 
 	'<div class="zoom-container">'
 	+	'<div class="zoom-caption">'
@@ -93,7 +94,7 @@ function deal_with(xml) {
 		}
 		if (mon[i] != mon[i-1])
 		{
-			gl += '<p>'+monzh[i]+'</p>'
+			gl += '<br>'+'<p>'+year+monzh[i]+'</p>'
 		}	
 		gl += str[i];
 	};
