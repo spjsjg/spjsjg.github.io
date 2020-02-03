@@ -98,5 +98,5 @@ function deal_with(xml) {
 		}	
 		gl += str2020[i];
 	};
-	document.getElementById("gallery2020").innerHTML = gl
+	document.getElementById("gallery").innerHTML = gl
 }
