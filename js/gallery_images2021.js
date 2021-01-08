@@ -22,7 +22,7 @@ xhttp2021.onreadystatechange = function() {
 		deal_with(this);
 	}
 };
-xhttp2021.open("GET", "images-2021.txt", true);
+xhttp2021.open("GET", "images-2020.txt", true);
 xhttp2021.send();
 
 function deal_with(xml) {
