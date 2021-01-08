@@ -28,7 +28,7 @@ xhttp2021.send();
 function deal_with(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
-	var gl = ""
+	var gl2021 = ""
 	for (var i=0; i<line.length-1; i++)
 	{
 		var data = line[i].split(" ")
@@ -87,9 +87,9 @@ function deal_with(xml) {
 		}
 		if (mon2021[i] != mon2021[i-1])
 		{
-			gl += '<p>'+year2021+monzh2021[i]+'</p>'
+			gl2021 += '<p>'+year2021+monzh2021[i]+'</p>'
 		}	
-		gl += str2021[i];
+		gl2021 += str2021[i];
 	};
-	document.getElementById("gallery2021").innerHTML = gl
+	document.getElementById("gallery2021").innerHTML = gl2021
 }

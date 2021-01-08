@@ -33,7 +33,7 @@ xhttp2020.send();
 function deal_with(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
-	var gl = ""
+	var gl2020 = '<p>'+year2020+'</p>'
 	for (var i=0; i<line.length-1; i++)
 	{
 		var data = line[i].split(" ")
@@ -53,8 +53,7 @@ function deal_with(xml) {
 		+			'</div>'
 		+		'</div>'
 		+	'</div>';
-		gl += '<p>'+year2020+'</p>'
-		gl += str2020[i];
+		gl2020 += str2020[i];
 	};
-	document.getElementById("gallery2020").innerHTML = gl
+	document.getElementById("gallery2020").innerHTML = gl2020
 }
