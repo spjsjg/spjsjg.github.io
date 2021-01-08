@@ -53,7 +53,49 @@ function deal_with(xml) {
 		+			'</div>'
 		+		'</div>'
 		+	'</div>';
-		gl += '<p>'+year2020+'</p>'
+		switch(mon2020[i])
+		{
+			case "Jan":
+				monzh2020[i]="1月";
+				break;
+			case "Feb":
+				monzh2020[i]="2月";
+				break;
+			case "Mar":
+				monzh2020[i]="3月";
+				break;
+			case "Apr":
+				monzh2020[i]="4月";
+				break;
+			case "May":
+				monzh2020[i]="5月";
+				break;
+			case "Jun":
+				monzh2020[i]="6月";
+				break;
+			case "Jul":
+				monzh2020[i]="7月";
+				break;
+			case "Aug":
+				monzh2020[i]="8月";
+				break;
+			case "Sept":
+				monzh2020[i]="9月";
+				break;
+			case "Oct":
+				monzh2020[i]="10月";
+				break;
+			case "Nov":
+				monzh2020[i]="11月";
+				break;
+			case "Dec":
+				monzh2020[i]="12月";
+				break;
+		}
+		if (mon2020[i] != mon2020[i-1])
+		{
+			gl += '<p>'+year2020+monzh2020[i]+'</p>'
+		}	
 		gl += str2020[i];
 	};
 	document.getElementById("gallery2020").innerHTML = gl
