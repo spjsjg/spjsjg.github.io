@@ -35,7 +35,7 @@ function deal_with2021(xml) {
 		mon2021[i] = data[0]
 		nm2021[i] = data[2]
 		str2021_1[i]='<a class="example-image-link" href="'+imgurl2021+'images/'+nm2021[i]+'" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">'
-		str2021_2[i]='<img class="example-image" src="'+imgurl2021+'thumb/'+nm2021[i]+'" alt=""/>'
+		str2021_2[i]='<img class="example-image" src="'+imgurl2021+'images/thumb/'+nm2021[i]+'" alt=""/>'
 		str2021[i]=	
 			'<div class="col-1-6">'
 		+		'<div class="wrap-col">'
