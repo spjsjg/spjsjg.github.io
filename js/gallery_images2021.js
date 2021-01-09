@@ -19,13 +19,13 @@ var str2021_3 =
 var xhttp2021 = new XMLHttpRequest();
 xhttp2021.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		deal_with(this);
+		deal_with2021(this);
 	}
 };
 xhttp2021.open("GET", "images-2020.txt", true);
 xhttp2021.send();
 
-function deal_with(xml) {
+function deal_with2021(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
 	var gl2021 = ""

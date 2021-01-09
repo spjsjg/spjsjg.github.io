@@ -24,13 +24,13 @@ var str2020_3 =
 var xhttp2020 = new XMLHttpRequest();
 xhttp2020.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		deal_with(this);
+		deal_with2020(this);
 	}
 };
 xhttp2020.open("GET", "images-2020.txt", true);
 xhttp2020.send();
 
-function deal_with(xml) {
+function deal_with2020(xml) {
 	contents = xml.responseText;
 	var line = contents.split("\n");
 	var gl2020 = '<p>'+year2020+'</p>'
