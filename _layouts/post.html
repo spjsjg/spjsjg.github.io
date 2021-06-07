@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section id="container">
+	<div class="zerogrid">
+		<div class="wrap-container clearfix">
+			<div id="main-content">
+				<div class="wrap-content">
+					<article>
+						<div class="art-content">
+							{% include header_title.html %}
+							<p id="author" style="display: none">
+								{% if page.author %}
+								{{ page.author }}
+								{% elsif site.name %}
+								{{ site.name }}
+								{% endif %}
+							</p>
+							<div class="entry-title">
+								<p>发表于 {{ page.date | date: "%Y-%m-%d" }} | 本文共 {{ page.content | number_of_words }} 字</p>
+							</div>
+							
+							<div class="art-content" id="post-content">
+								<p>{{ content }}</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<hr class="line">
+		</div>
+	</div>
+</section>

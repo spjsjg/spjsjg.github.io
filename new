@@ -1,0 +1,12 @@
+#!/bin/bash
+# Create a new article
+
+if [ ! -d "./_posts" ]; then
+  echo "Path _posts/ doesn't exist. $1"
+else
+  cd ./_posts
+  filename="`date "+%Y-%m-%d-"`$1.md"
+  title=`echo "$1" | tr "-" " "`
+  date=`date "+ %Y-%m-%d %H:%M:%S"`
+  echo -e "---\ntitle: $title\nsubtitle: 产品\ndate: $date +0800\ncategory: $2\ntags:\nexcerpt:\n---" > $filename
+fi

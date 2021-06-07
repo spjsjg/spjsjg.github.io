@@ -1,0 +1,10 @@
+{% if site.favicon %}
+<div class="logo t-center"><a href="/"><img src="{{ site.favicon }}"/></a></div>
+{% else %}
+  {% assign image_files = site.static_files | where: "image", true %}
+  {% for image in image_files %}
+    {% if image.basename == 'favicon' %}
+    <div class="logo t-center"><a href="/"><img src="{{ image.path }}"/></a></div>
+    {% endif %}
+  {% endfor %}
+{% endif %}

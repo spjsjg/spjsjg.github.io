@@ -1,0 +1,60 @@
+defaults:
+  -
+      scope:
+        path: "" # 一个空的字符串代表项目中所有的文件
+        type: "posts" # 以前的 `post`， 在 Jekyll 2.2 里。
+      values:
+        layout: "post"
+        permalink: /products/:categories/:title_:short_year:month:day:hour:minute:second:output_ext
+  -
+    scope:
+      path: "assets/img"
+    values:
+      image: true
+
+title: 三平金属结构制作
+url: https://spjsjg.cf
+description_title: 质量第一 诚信为上 价格优廉
+description: >- # this means to ignore newlines until "baseurl:"
+  承接各种金属结构制作，备有折弯机、剪板机，加工各种不锈钢制品，上门安装定做楼梯扶手、艺术院门、橱柜面板等，还承接雨棚搭建、各种广告牌和钢架、各种防盗网、门窗、铝合金、塑钢门的加工制作，配备各种防盗门、不锈钢304标门及定制非标门、套装门、卫浴门的展厅。
+  
+
+  欢迎有需求者来电订购，本店本着精心设计、用心制作、诚信服务的态度接洽每笔业务。
+phone: 13035184979
+addresses: >-
+  地址：应城市东马坊枣林路103号
+  
+  地址：应城市东马坊化工大道41号
+#favicon:
+show_excerpt: true
+
+menu:
+  主页: /
+  产品: /products
+  相册: /gallery
+#  关于: /about
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

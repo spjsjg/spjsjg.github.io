@@ -1,0 +1,15 @@
+<article class="article-block" style="background: none">
+    <div class="col-1-3">
+        {% if site.show_excerpt == true %}
+        <div class="article-excerpt">
+            <p>{{ post.excerpt | replace_first: "/images/", "/images/thumb/" }}</p>
+        </div>
+        {% endif %}
+        <a href="{{ post.url }}"  title='点击查看"{{ post.title }}"''>
+            <div class="entry-title">
+            <h2 style="font-size:25px">{{ post.title }}</h2>
+            <p class="article-date" style="font-size:15px">{{ post.date|date: "%Y-%m-%d" }}</p>
+            </div>
+        </a>
+    </div>
+</article>

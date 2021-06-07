@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section id="container">
+	<div class="zerogrid">
+		<div class="wrap-container clearfix">
+			<div id="main-content">
+				<div class="wrap-content">
+					{% for category in site.categories %}
+						{% if category.first==page.category %}
+							{% for post in category.last %}
+								{% include article_list.html %}
+							{% endfor %}
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			<hr class="line">
+		</div>
+	</div>
+</section>

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section id="container">
+	<div class="zerogrid">
+		<div class="wrap-container clearfix">
+			<div id="main-content">
+				<div class="wrap-content">
+					{% for post in site.posts %}
+						{% include article_list.html %}
+					{% endfor %}
+				</div>
+			</div>
+			<hr class="line">
+		</div>
+	</div>
+</section>

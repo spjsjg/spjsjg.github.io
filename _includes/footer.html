@@ -1,0 +1,44 @@
+<footer class="t-center">
+    <div class="wrap-footer">
+        <div class="zerogrid">
+            <div class="row">
+                <span class="phone">联系电话: {{ site.phone }}</span>
+                <br>
+                <span class="phone">{{ site.addresses | newline_to_br }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="zerogrid">
+            <div class="row">
+                <div class="copy-right">
+                    <p>Copyright @ {{ site.title}} - More Templates <a href="{{ site.url }}" title="{{ site.title}}">{{ site.title}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+		if ($.browser.msie && $.browser.version.substr(0,1)<7)
+		{
+		$('li').has('ul').mouseover(function(){
+			$(this).children('ul').css('visibility','visible');
+			}).mouseout(function(){
+			$(this).children('ul').css('visibility','hidden');
+			})
+		}
+
+		/* Mobile */
+		$("#menu-trigger").on("click", function(){
+			$("#menu").slideToggle();
+		});
+
+		// iPad
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		if (isiPad) $('#menu ul').addClass('no-transition');      
+    });          
+</script>

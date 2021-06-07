@@ -1,0 +1,46 @@
+<header >
+	<div class="zerogrid">
+		<div class="wrap-header">
+			{% include favicon.html %}	
+			<div id='cssmenu' class="align-center">
+				<ul>
+                    {% for name_path in site.menu %}
+                        {% assign name = name_path[0] %}
+                        {% assign path = name_path[1] %}
+				        <li {% if name==page.subtitle %} class="active" {% endif %}><a href={{ path }}><span>{{ name }}</span></a>
+						{% if name=='产品' %}
+							<ul>
+								{% for category in site.categories %}
+								<li {% if category.first==page.category %} class="active" {% endif %}><a href={{ path }}/{{category | first}}>{{category | first}}</a></li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+						</li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+{% if page.subtitle!='主页' %}
+<section id="container">
+	<div class="wrap-container">
+		<div class="crumbs zerogrid">
+			<ul>
+				<li><a href="/">主页</a></li>
+                {% for name_path in site.menu %}
+                    {% assign name = name_path[0] %}
+                    {% assign path = name_path[1] %}
+                    {% if name==page.subtitle %}
+                        <li><a href={{ path }}>{{ name }}</a></li>
+						{% if page.subtitle=='产品' and page.category %}
+							<li><a href={{ path }}/{{ page.category }}>{{ page.category }}</a></li>
+						{% endif %}
+                    {% endif %}
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+{% endif %}
