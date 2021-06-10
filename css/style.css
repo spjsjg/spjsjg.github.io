@@ -118,7 +118,7 @@ header .logo{margin-bottom: 100px;}
 
 article{ margin-bottom: 40px;background: #283038;}
 article:after, article:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
-article img{max-height: 400px;width: 100%; border: none;}
+article img{height: auto;width: 100%; border: none;}
 article .art-header{}
 article .art-content{ padding: 40px 60px 30px 60px;}/*----*/
 article .art-content blockquote {border-left: 3px solid #1c7791;font-size: 18px;margin: 0 50px;font-style: italic;color: #666;padding-left: 20px;}

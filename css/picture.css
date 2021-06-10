@@ -17,6 +17,7 @@
 .card h2:hover {text-decoration: underline;}
 
 .card .card_excerpt,.card_excerpt img {
+    width: 100%;
     background-color:beige;
     height:15vw;
     border-radius: .4rem .4rem 0 0;

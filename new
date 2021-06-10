@@ -1,6 +1,8 @@
 #!/bin/bash
 # Create a new article
 
+ROOTDIR=$(pwd)
+
 if [ ! -d "./_posts" ]; then
   echo "Path _posts/ doesn't exist. $1"
 else
@@ -9,4 +11,12 @@ else
   title=`echo "$1" | tr "-" " "`
   date=`date "+ %Y-%m-%d %H:%M:%S"`
   echo -e "---\ntitle: $title\nsubtitle: 产品\ndate: $date +0800\ncategory: $2\ntags:\nexcerpt:\n---" > $filename
+fi
+
+if [ -d "$ROOTDIR/products/$2" ]; then
+  echo " Category \"$2\" exist. "
+else
+  mkdir -p $ROOTDIR/products/$2
+  cd $ROOTDIR/products/$2
+  echo -e "---\nlayout: category\ntitle: 三平金属结构制作\nsubtitle: 产品\ncategory: $2\n---" > index.md
 fi
